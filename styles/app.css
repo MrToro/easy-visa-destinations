@@ -1,0 +1,104 @@
+:root {
+	--color-primary: rgba(209, 243, 102, 1);
+	--color-bg: rgba(20, 22, 39, 1);
+	--color-bg-variant: rgba(28, 31, 55, 1);
+	--color-white: rgba(208, 212, 231, 1);
+	--color-gray: rgba(95, 100, 126, 1);
+}
+::-webkit-scrollbar {
+	display: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--color-bg);
+	color: var(--color-white);
+	font-weight: 400;
+	line-height: 1.7;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.easy-visa-destinations {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.easy-visa-destinations__container {
+	min-width: 40rem;
+}
+.easy-visa-destinations__heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.easy-visa-destinations__heading h2 {
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+.easy-visa-destinations__heading a {
+	color: var(--color-primary);
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.destinations__cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 2rem;
+	margin-top: 2.4rem;
+}
+.destination__card {
+	width: 25rem;
+	border-radius: 24px;
+	background-color: var(--color-bg-variant);
+}
+.destination__card img {
+	width: 100%;
+	padding-top: 0.8rem;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
+	border-radius: 24px;
+}
+.destination__card h3 {
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 1.6rem;
+}
+.destination__card-data {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.6rem;
+	border-radius: 0 0 24px 24px;
+	border-top: 2px dashed rgba(45, 48, 73, 1);
+	transition: all 0.3s ease;
+}
+.destination__card-data--active {
+	border-color: transparent;
+	color: var(--color-bg);
+	background-color: var(--color-primary);
+}
+.destination__card-data p:first-child {
+	font-size: 1.4rem;
+}
+.destination__card-data p:last-child {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+.destination__card-data span {
+	width: 2rem;
+	height: 2rem;
+	background-image: url('../assets/coin.png');
+}
